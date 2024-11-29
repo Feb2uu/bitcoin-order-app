@@ -67,3 +67,15 @@ jobs:
       - name: Deploy
         run: |
           npm run deploy
+
+      - name: delete branch
+        run: |
+          git push <remote_name> :<branch_name>
+          
+      - name: lint
+        run: |
+          ng lint
+          
+      - name: Audit 
+        run: |
+          npm audit fix
